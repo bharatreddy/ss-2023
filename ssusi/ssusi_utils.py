@@ -28,7 +28,7 @@ class UtilsSsusi(object):
         # parent directory to be the name of the
         # satellite listed in satList
         for sat in satList:
-            currFname = inpDir + sat + "/" + currDtStr + ".txt"
+            currFname = inpDir + sat + "_prcsd" + "/" + currDtStr + ".txt"
             # check if file exists
             if os.path.exists( currFname ):
                 print("reading data from--->", currFname)

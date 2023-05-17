@@ -114,11 +114,14 @@ class ProcessData(object):
                             d130ColList + d135ColList + dLBHSColList + dLBHLColList
             ssusiDF = ssusiDF[ outCols ]
             # We now need to write the processed data to a file
-            if not os.path.exists(self.outDir + "/" +satName):
-                os.makedirs(self.outDir + "/" + satName)
+#             if not os.path.exists(self.outDir + "/" +satName):
+#                 os.makedirs(self.outDir + "/" + satName)
             # if the file for the date exists append data
             # else create the file and write data!!!
-            outFileName = self.outDir + "/" + satName + "/" + currDate + ".txt"
+            outFileDir = self.outDir + "/" + satName + "_prcsd" + "/"
+            if not os.path.exists(outFileDir):
+                os.makedirs(outFileDir)
+            outFileName = outFileDir + currDate + ".txt"
             if not os.path.exists( outFileName ):
                 # NOTE we only need header when writing data for the first time!
                 with open(outFileName, 'w') as ftB:
