@@ -288,7 +288,7 @@ class UtilsSsusi(object):
             ssusiPlot = ax.pcolormesh(xVecs, yVecs,\
                             ssusiDisk, zorder=zorder,
                             vmin=0, vmax=vmax,
-                            transform=crs, alpha=alpha, cmap=ssusiCmap, shading='flat')
+                            transform=crs, alpha=alpha, cmap=ssusiCmap)
             ssusiPlot.set_rasterized(True)
             # overlay time
             if overlayTime:
